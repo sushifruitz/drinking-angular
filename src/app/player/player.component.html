@@ -1,0 +1,12 @@
+<div class="container" *ngIf="players?.length > 0;else noItems">
+  <mat-list role="list" *ngFor="let player of players" class="collection">
+    <mat-list-item class="collection-item">
+      {{player.name}}: {{player.score}}
+    </mat-list-item>
+  </mat-list>
+</div>
+
+<ng-template #noItems>
+  <hr>
+  <h2>THERE ARE NO PLAYERS</h2>
+</ng-template>

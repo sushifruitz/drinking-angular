@@ -1,0 +1,26 @@
+<form
+  [formGroup]="myForm"
+  class="form"
+  name="playerName"
+  (submit)="onSubmit($event)"
+>
+  <hr>
+  {{ myForm.value | json }}
+  <hr>
+    <mat-form-field class="input">
+      <input
+        formControlName="name"
+        placeholder="Player Name"
+        matInput
+      />
+    </mat-form-field>
+    <button 
+      className="button"
+      mat-raised-button
+      color="accent"
+      type="submit"
+      [disabled]="!myForm.valid"
+    >
+        Add Player
+    </button>
+</form>
