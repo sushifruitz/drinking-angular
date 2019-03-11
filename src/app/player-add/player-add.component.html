@@ -2,7 +2,7 @@
   [formGroup]="myForm"
   class="form"
   name="playerName"
-  (submit)="onSubmit($event)"
+  (ngSubmit)="onSubmit()"
 >
   <hr>
   {{ myForm.value | json }}
@@ -11,13 +11,15 @@
       <input
         formControlName="name"
         placeholder="Player Name"
+        [(ngModel)]="player.name"
+        name= "player"
         matInput
       />
     </mat-form-field>
     <button 
       className="button"
       mat-raised-button
-      color="accent"
+      color="primary"
       type="submit"
       [disabled]="!myForm.valid"
     >

@@ -1,9 +1,23 @@
 <div class="container" *ngIf="players?.length > 0;else noItems">
-  <mat-list role="list" *ngFor="let player of players" class="collection">
-    <mat-list-item class="collection-item">
-      {{player.name}}: {{player.score}}
-    </mat-list-item>
-  </mat-list>
+  <mat-card
+    *ngFor="let player of players; let i = index" 
+    class="collection"
+    [ngClass]="{
+      'first-place': i === 0,
+      'second-place': i === 1,
+      'third-place': i === 2
+    }"
+  >
+    <div class="collection-item">
+      <h3 class="player-name">{{i+1}} {{player.name}}</h3>
+      <p class="player-stats">{{player.score}} beverages!</p>
+    </div>
+      <div class="player-actions">
+          <button mat-mini-fab>+</button>
+          <button mat-mini-fab>-</button>
+          <button mat-mini-fab color="warn">X</button>
+      </div>
+  </mat-card>
 </div>
 
 <ng-template #noItems>

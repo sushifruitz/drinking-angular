@@ -9,6 +9,10 @@ import { Players } from '../models/players';
   styleUrls: ['./player-add.component.scss'],
 })
 export class PlayerAddComponent implements OnInit {
+  player: Players = {
+    name: '',
+    score: 0
+  };
 
   myForm: FormGroup;
 
@@ -21,5 +25,12 @@ export class PlayerAddComponent implements OnInit {
     });
 
     this.myForm.valueChanges.subscribe(console.log);
+  }
+
+  onSubmit() {
+    if (this.player.name !== '') {
+    this.insertPlayer.addPlayer(this.player);
+    this.player.name = '';
+    }
   }
 }

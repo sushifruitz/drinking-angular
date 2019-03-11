@@ -1,12 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+@import '@angular/material/prebuilt-themes/pink-bluegrey.css';
 
-html, body { height: 100%; }
+html,
+body { 
+    height: 100%;
+}
+
 body { 
     margin: 0;
     font-family: 'Montserrat',"Helvetica Neue", sans-serif;
     background: #303030;
-    color: aliceblue;
+    color: rgb(255, 255, 255);
     text-align: center;
 }
 

@@ -1,10 +1,43 @@
-.collection-item {
-    text-align: center;
+.container {
+    width: 600px;
+    margin: 0 auto;
 }
 
-.container {
-    width: 300px;
-    height: 30px;
-    margin: 0 auto;
+.collection {
+    margin-top: 10px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
 
+.player-name {
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin: 10px;
+    word-break: break-all;
+}
+
+.player-stats {
+    font-size: 1.3rem;
+    font-style: italic;
+    font-weight: 300;
+    margin: 10px;
+}
+
+.player-actions {
+    flex-shrink: 0;
+}
+
+.player-actions > button {
+    margin-left: 3px;
+}
+
+.first-place{
+    background-color: goldenrod;
+}
+.second-place{
+    background-color: silver;
+}
+.third-place{
+    background-color: brown;
 }

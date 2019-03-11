@@ -11,20 +11,15 @@ export class CreateUserService {
   users: Observable<Players[]>;
 
   constructor(public db: AngularFirestore) {
-    this.users = this.db.collection('players').valueChanges();
+    this.users = this.db.collection('players', ref => ref.orderBy('score', 'desc')).valueChanges();
+    this.userCollection = this.db.collection('players');
   }
 
   getUsers() {
     return this.users;
   }
+
+  addPlayer(players: Players) {
+    this.userCollection.add(players);
+  }
 }
-
-
-
-/* createUser(name){
-  return this.db.collection('players').add({
-    name: value.name,
-    nameToSearch: value.name.toLowerCase(),
-    score: 0
-  });
-}; */
