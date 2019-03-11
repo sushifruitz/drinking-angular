@@ -13,8 +13,8 @@
       <p class="player-stats">{{player.score}} beverages!</p>
     </div>
       <div class="player-actions">
-          <button mat-mini-fab>+</button>
-          <button mat-mini-fab>-</button>
+          <button mat-mini-fab (click)="addScore($event, player)">+</button>
+          <button mat-mini-fab (click)="removeScore($event, player)">-</button>
           <button mat-mini-fab color="warn" (click)="deletePlayer($event, player)">X</button>
       </div>
   </mat-card>

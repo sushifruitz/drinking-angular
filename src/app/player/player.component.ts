@@ -1,6 +1,7 @@
 import { Players } from './../models/players';
 import { Component, OnInit } from '@angular/core';
 import { CreateUserService } from '../services/firebase.service';
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 
 @Component({
   selector: 'app-player',
@@ -22,5 +23,15 @@ export class PlayerComponent implements OnInit {
   deletePlayer(event, player) {
     console.log(event);
     this.Player.deletePlayer(player);
+  }
+
+  addScore(event, player) {
+    console.log(event);
+    this.Player.addScore(player);
+  }
+
+  removeScore(event, player) {
+    console.log(event);
+    this.Player.removeScore(player);
   }
 }

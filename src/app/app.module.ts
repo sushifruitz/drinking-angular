@@ -26,6 +26,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatListModule} from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
+import {MatBadgeModule} from '@angular/material/badge';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
@@ -46,6 +47,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatButtonModule,
     ReactiveFormsModule,
     MatListModule,
+    MatBadgeModule,
     MatCardModule,
     FlexLayoutModule,
     AngularFireModule.initializeApp(environment.firebase, 'drinkingscore'),
