@@ -1,7 +1,6 @@
 import { Players } from './../models/players';
 import { Component, OnInit } from '@angular/core';
 import { CreateUserService } from '../services/firebase.service';
-import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 
 @Component({
   selector: 'app-player',
@@ -35,3 +34,7 @@ export class PlayerComponent implements OnInit {
     this.Player.removeScore(player);
   }
 }
+
+// TODO Add Animations
+// TODO Add Infinite Vertical Scroll
+// FIXME Colors don't repeat when people have the same drinks consumed
