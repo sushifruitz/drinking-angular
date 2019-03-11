@@ -4,25 +4,22 @@
   name="playerName"
   (ngSubmit)="onSubmit()"
 >
-  <hr>
-  {{ myForm.value | json }}
-  <hr>
-    <mat-form-field class="input">
-      <input
-        formControlName="name"
-        placeholder="Player Name"
-        [(ngModel)]="player.name"
-        name= "player"
-        matInput
-      />
-    </mat-form-field>
-    <button 
-      className="button"
-      mat-raised-button
-      color="primary"
-      type="submit"
-      [disabled]="!myForm.valid"
-    >
-        Add Player
-    </button>
+  <mat-form-field class="input">
+  <input
+    formControlName="name"
+    placeholder="Player Name"
+    [(ngModel)]="player.name"
+    name= "player"
+    matInput
+  />
+  </mat-form-field>
+  <button 
+    className="button"
+    mat-raised-button
+    color="primary"
+    type="submit"
+    [disabled]="!myForm.valid"
+  >
+    Add Player
+  </button>
 </form>

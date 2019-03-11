@@ -1,6 +1,6 @@
+import { Players } from './../models/players';
 import { Component, OnInit } from '@angular/core';
 import { CreateUserService } from '../services/firebase.service';
-import { Players } from '../models/players';
 
 @Component({
   selector: 'app-player',
@@ -10,13 +10,17 @@ import { Players } from '../models/players';
 export class PlayerComponent implements OnInit {
   players: Players[];
 
-  constructor(private insertPlayer: CreateUserService) { }
+  constructor(private Player: CreateUserService) { }
 
   ngOnInit() {
-    this.insertPlayer.getUsers().subscribe(players => {
+    this.Player.getUsers().subscribe(players => {
       console.log(players);
       this.players = players;
     });
   }
 
+  deletePlayer(event, player) {
+    console.log(event);
+    this.Player.deletePlayer(player);
+  }
 }

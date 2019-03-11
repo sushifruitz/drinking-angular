@@ -15,7 +15,7 @@
       <div class="player-actions">
           <button mat-mini-fab>+</button>
           <button mat-mini-fab>-</button>
-          <button mat-mini-fab color="warn">X</button>
+          <button mat-mini-fab color="warn" (click)="deletePlayer($event, player)">X</button>
       </div>
   </mat-card>
 </div>
