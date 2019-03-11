@@ -50,7 +50,7 @@ export class CreateUserService {
     if ( newScore > 0 ) {
       newScore = newScore - 1;
     } else {
-      console.log("Erro");
+      console.log('Error');
     }
     this.playerDoc.update({score: newScore });
   }
