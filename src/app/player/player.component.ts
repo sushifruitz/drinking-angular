@@ -35,6 +35,8 @@ export class PlayerComponent implements OnInit {
   }
 }
 
-// TODO Add Animations
-// TODO Add Infinite Vertical Scroll
-// FIXME Colors don't repeat when people have the same drinks consumed
+// TODO: Add Animations
+// TODO: Add Infinite Vertical Scroll
+// TODO: Ability to edit name
+// FIXME: Give an alert when tryind to reduce beverages below 0
+// FIXME: Colors don't repeat when people have the same drinks consumed
